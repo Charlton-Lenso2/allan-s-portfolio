@@ -1,0 +1,48 @@
+.aboutsection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 30px;
+}
+
+.abouttext {
+  padding: 20px;
+  height: 600px;
+  width: 50%;
+}
+
+.aboutimage {
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.aboutimage img {
+  object-fit: cover;
+  height: 600px;
+  border-radius: 20px;
+}
+
+.abtbtn {
+  width: 170px;
+  height: 60px;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  align-items: center;
+  border-radius: 30px;
+  color: #000;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  font-size: large;
+  transition: all 0.5s ease;
+}
+
+.abtbtn:hover {
+  transform: scale(1.02);
+  kerning: 4px;
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.6);
+}

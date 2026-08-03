@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 20px 16px 0;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.navsection {
+  width: min(92%, 1100px);
+  z-index: 1000;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  min-height: 70px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.13);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  background-color: rgba(30, 30, 30, 0.25);
+}
+
+.navsection ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: clamp(0.75rem, 2vw, 2rem);
+  flex-wrap: wrap;
+}
+
+.navsection ul li {
+  list-style: none;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+.navsection ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-family: "Oswald", sans-serif;
+}
+
+.name {
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  letter-spacing: 0.08em;
+}
+
+.name a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-pill {
+  align-items: center;
+  padding: 6px 12px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 999px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .navsection {
+    width: calc(100% - 24px);
+    padding: 10px 14px;
+    top: 12px;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navsection .nav-links {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: min(220px, 90vw);
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 16px;
+    align-items: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .navsection .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .name {
+    font-size: 1.35rem;
+  }
+}

@@ -1,0 +1,184 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  top: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.product,
+.designer {
+  font-family: "Oswald", sans-serif;
+}
+
+em,
+i,
+.italic,
+.font-italic {
+  font-family: "Oswald", sans-serif;
+  font-style: italic;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+  padding: 40px clamp(20px, 5vw, 50px);
+  background-color: #000;
+  margin-top: 30px;
+  margin-top: auto;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.footer .name,
+.footer h3,
+.footer p,
+.footer a,
+.footer .iconsection {
+  font-family: "Oswald", sans-serif;
+}
+
+.footer .name {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.footer h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer p {
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+.footer .iconsection {
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.footer .copy {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #a0a0a0;
+  margin-top: 10px;
+}
+
+.iconsection {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icon-github {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  background-color: #000;
+
+  transition: all 0.3s ease;
+}
+
+.icon-github:hover {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon-github:active {
+  transform: scale(0.95);
+}
+
+.icon-linkedin {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  background-color: #0084ff;
+
+  transition: all 0.3s ease;
+}
+
+.icon-linkedin:hover {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 8px 20px rgb(0, 132, 255);
+}
+
+.icon-linkedin:active {
+  transform: scale(0.95);
+}
+
+.icon-email {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  background-color: #000;
+
+  transition: all 0.3s ease;
+}
+
+.icon-email:hover {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon-email:active {
+  transform: scale(0.95);
+}
+
+.footer h3 {
+  font-family: "Italianno", cursive;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+}
