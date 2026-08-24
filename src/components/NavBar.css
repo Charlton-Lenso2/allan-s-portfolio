@@ -74,9 +74,15 @@
 .contact-pill {
   align-items: center;
   padding: 6px 12px;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000 !important;
   border-radius: 999px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-pill:hover {
+  color: #fff !important;
+  background-color: #303030;
 }
 
 .hamburger {

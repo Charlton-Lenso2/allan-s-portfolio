@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import "./ProjectsSection.css";
 
 const projects = [
-  { number: "01", title: "Form & Function", type: "Product design · 2025", description: "A thoughtful digital experience built around clarity, character, and the everyday moments that matter.", image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85" },
-  { number: "02", title: "Morrow Studio", type: "Brand identity · 2024", description: "An expressive identity system designed to make a new creative studio feel established from day one.", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=85" },
-  { number: "03", title: "Off Grid", type: "Editorial · 2024", description: "A tactile, image-led visual direction for stories about travel, culture, and getting wonderfully lost.", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" },
+  { number: "01", title: "Form & Function", type: "Product design - 2025", description: "A thoughtful digital experience built around clarity, character, and the everyday moments that matter.", image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85" },
+  { number: "02", title: "Morrow Studio", type: "Brand identity - 2024", description: "An expressive identity system designed to make a new creative studio feel established from day one.", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=85" },
+  { number: "03", title: "Off Grid", type: "Editorial - 2024", description: "A tactile, image-led visual direction for stories about travel, culture, and getting wonderfully lost.", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" },
 ];
 
 function ProjectsSection() {
@@ -26,7 +26,7 @@ function ProjectsSection() {
             <div className="projectImageWrap">
               <img src={project.image} alt="" className="projectImage" />
               <span className="projectNumber">{project.number}</span>
-              <span className="projectView">View project <span aria-hidden="true">↗</span></span>
+              <Link className="projectView" to="/projects">View project <span aria-hidden="true">&rarr;</span></Link>
             </div>
             <div className="projectDetails">
               <p>{project.type}</p>
@@ -39,7 +39,7 @@ function ProjectsSection() {
 
       <div className="projectsFooter">
         <p>More curious things in the works.</p>
-        <Link className="allProjectsLink" to="/projects">View all projects <span aria-hidden="true">↗</span></Link>
+        <Link className="allProjectsLink" to="/projects">View all projects <span aria-hidden="true">&rarr;</span></Link>
       </div>
 
       <div className="toolkitSection">

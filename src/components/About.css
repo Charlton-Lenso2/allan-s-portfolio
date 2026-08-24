@@ -15,6 +15,6 @@
 .capabilityList h3 { font-family: "Oswald", sans-serif; font-size: 1.5rem; font-weight: 500; }
 .capabilityList p { color: #909090; font-size: .92rem; line-height: 1.5; }
 .aboutClosing { display: flex; justify-content: space-between; align-items: center; margin-top: clamp(5rem,10vw,8rem); padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.22); color: #909090; }
-.aboutClosing a { color: #fff; font-family: "Oswald", sans-serif; font-size: 1.1rem; text-decoration: none; }
-.aboutClosing a:hover { color: #c9ff48; }
+.aboutClosing a { padding: .75rem 1rem; color: #111; background: #f5f3ef; border-radius: 999px; font-family: "Oswald", sans-serif; font-size: 1rem; font-weight: 600; text-decoration: none; transition: color .2s ease, background .2s ease; }
+.aboutClosing a:hover { color: #fff; background: #303030; }
 @media (max-width: 720px) { .aboutHero, .aboutStory, .aboutCapabilities { grid-template-columns: 1fr; } .aboutPortrait { max-width: 420px; } .capabilityList > div { grid-template-columns: 2.8rem 1fr; } .capabilityList p { grid-column: 2; } .aboutClosing { align-items: flex-start; flex-direction: column; gap: 1rem; } }

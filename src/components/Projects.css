@@ -13,6 +13,6 @@
 .archiveDetails h2 { margin-top: .35rem; font-family: "Oswald", sans-serif; font-size: clamp(2rem,3vw,3rem); font-weight: 500; line-height: 1; letter-spacing: -.04em; }
 .archiveDescription { max-width: 440px; margin-top: .8rem; color: #999; font-size: .92rem; line-height: 1.55; }
 .projectsEnd { display: flex; justify-content: space-between; align-items: center; margin-top: clamp(5rem,10vw,8rem); padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.22); color: #909090; }
-.projectsEnd a { color: #fff; font-family: "Oswald", sans-serif; font-size: 1.1rem; text-decoration: none; }
-.projectsEnd a:hover { color: #c9ff48; }
+.projectsEnd a { padding: .75rem 1rem; color: #111; background: #f5f3ef; border-radius: 999px; font-family: "Oswald", sans-serif; font-size: 1rem; font-weight: 600; text-decoration: none; transition: color .2s ease, background .2s ease; }
+.projectsEnd a:hover { color: #fff; background: #303030; }
 @media (max-width: 800px) { .projectsPageIntro { grid-template-columns: 1fr; } .projectsArchive { grid-template-columns: 1fr; max-width: 580px; } .projectsEnd { align-items: flex-start; flex-direction: column; gap: 1rem; } }
