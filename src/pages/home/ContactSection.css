@@ -1,0 +1,18 @@
+.contactSection { max-width: 1320px; margin: 0 auto; padding: clamp(5rem,10vw,9rem) clamp(1.25rem,5vw,5rem); color: #f5f3ef; background: #000; }
+.contactIntro { display: flex; justify-content: space-between; gap: 2rem; }
+.contactEyebrow, .formField label { color: rgba(255,255,255,.52); font-family: "Oswald", sans-serif; font-size: .72rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
+.contactIntro h2 { margin-top: .65rem; font-family: "Oswald", sans-serif; font-size: clamp(3.15rem,7vw,6.5rem); font-weight: 500; line-height: .86; letter-spacing: -.055em; }
+.contactCopy { max-width: 330px; margin-top: auto; color: #a7a7a7; line-height: 1.6; }
+.contactForm { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2.25rem 1.5rem; margin-top: clamp(3rem,6vw,5rem); padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.22); }
+.formField { display: flex; flex-direction: column; gap: .7rem; }
+.formFieldWide { grid-column: 1 / -1; }
+.formField input, .formField textarea { width: 100%; padding: .7rem 0; color: #fff; background: transparent; border: 0; border-bottom: 1px solid rgba(255,255,255,.3); border-radius: 0; font: inherit; outline: none; resize: vertical; transition: border-color .2s ease; }
+.formField textarea { min-height: 115px; }
+.formField input::placeholder, .formField textarea::placeholder { color: #686868; }
+.formField input:focus, .formField textarea:focus { border-color: #fff; }
+.contactSubmit { justify-self: start; padding: .9rem 1.15rem; color: #0b0b0b; background: #f5f3ef; border: 1px solid #f5f3ef; border-radius: 0; cursor: pointer; font-family: "Oswald", sans-serif; font-size: 1rem; font-weight: 600; letter-spacing: .02em; transition: color .2s ease, background .2s ease, transform .2s ease; }
+.contactSubmit:hover { color: #fff; background: transparent; transform: translateY(-2px); }
+.contactNotes { display: flex; justify-content: space-between; gap: 1rem; margin-top: 3rem; color: #808080; font-size: .86rem; }
+.contactNotes a { color: #f5f3ef; text-decoration: none; }
+.contactNotes a:hover { text-decoration: underline; text-underline-offset: .25rem; }
+@media (max-width: 680px) { .contactIntro, .contactNotes { flex-direction: column; gap: 1.2rem; } .contactCopy { margin-top: 0; } .contactForm { grid-template-columns: 1fr; } }

@@ -1,5 +1,4 @@
 import "./Hero.css";
-import React from "react";
 import hero from "../../assets/hero.jpeg";
 
 function Hero() {

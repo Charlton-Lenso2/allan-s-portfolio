@@ -1,8 +1,8 @@
 import AboutSection from "../pages/home/AboutSection"
+import ContactSection from "../pages/home/ContactSection"
 import Hero from "../pages/home/Hero"
 import ProjectsSection from "../pages/home/ProjectsSection"
 import "./Home.css"
-import React from 'react'
 
 function Home() {
   return (
@@ -10,6 +10,7 @@ function Home() {
       <Hero/>
       <AboutSection/>
       <ProjectsSection/>
+      <ContactSection/>
     </div>
   )
 }

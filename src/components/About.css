@@ -1,0 +1,20 @@
+.aboutPage, .projectsPage { min-height: 100vh; padding: clamp(8rem,13vw,11rem) clamp(1.25rem,5vw,5rem) clamp(5rem,10vw,9rem); color: #f5f3ef; background: #000; }
+.aboutHero, .aboutStory, .aboutCapabilities, .aboutClosing { max-width: 1320px; margin-right: auto; margin-left: auto; }
+.aboutHero { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(260px,.65fr); align-items: end; gap: clamp(2rem,7vw,7rem); }
+.pageEyebrow { color: rgba(255,255,255,.52); font-family: "Oswald", sans-serif; font-size: .72rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
+.aboutPageIntro h1 { margin: .75rem 0 1.5rem; font-family: "Oswald", sans-serif; font-size: clamp(3.6rem,8vw,7.5rem); font-weight: 500; line-height: .82; letter-spacing: -.06em; }
+.aboutPageLead { max-width: 500px; color: #ababab; font-size: clamp(1rem,1.5vw,1.15rem); line-height: 1.65; }
+.aboutPortrait { display: block; width: 100%; max-height: 580px; object-fit: cover; object-position: center; filter: grayscale(1); }
+.aboutStory { display: grid; grid-template-columns: minmax(160px,.5fr) minmax(0,1.2fr); gap: 2rem; margin-top: clamp(6rem,13vw,11rem); padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.22); }
+.aboutStory h2 { max-width: 800px; font-family: "Oswald", sans-serif; font-size: clamp(2rem,4vw,4rem); font-weight: 500; line-height: 1; letter-spacing: -.04em; }
+.aboutStory div > p { max-width: 620px; margin-top: 1.4rem; color: #a0a0a0; line-height: 1.7; }
+.aboutCapabilities { display: grid; grid-template-columns: minmax(160px,.5fr) minmax(0,1.2fr); gap: 2rem; margin-top: clamp(5rem,10vw,8rem); }
+.capabilityList > div { display: grid; grid-template-columns: 3.5rem minmax(0,1fr) minmax(180px,.85fr); gap: 1rem; padding: 1.25rem 0; border-top: 1px solid rgba(255,255,255,.2); }
+.capabilityList > div:last-child { border-bottom: 1px solid rgba(255,255,255,.2); }
+.capabilityList span { color: #888; font-family: "Oswald", sans-serif; font-size: .8rem; }
+.capabilityList h3 { font-family: "Oswald", sans-serif; font-size: 1.5rem; font-weight: 500; }
+.capabilityList p { color: #909090; font-size: .92rem; line-height: 1.5; }
+.aboutClosing { display: flex; justify-content: space-between; align-items: center; margin-top: clamp(5rem,10vw,8rem); padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.22); color: #909090; }
+.aboutClosing a { color: #fff; font-family: "Oswald", sans-serif; font-size: 1.1rem; text-decoration: none; }
+.aboutClosing a:hover { color: #c9ff48; }
+@media (max-width: 720px) { .aboutHero, .aboutStory, .aboutCapabilities { grid-template-columns: 1fr; } .aboutPortrait { max-width: 420px; } .capabilityList > div { grid-template-columns: 2.8rem 1fr; } .capabilityList p { grid-column: 2; } .aboutClosing { align-items: flex-start; flex-direction: column; gap: 1rem; } }

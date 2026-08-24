@@ -1,12 +1,8 @@
-import "./Contact.css"
-import React from 'react'
+import ContactSection from "../pages/home/ContactSection";
+import "./Contact.css";
 
 function Contact() {
-  return (
-    <div>
-      
-    </div>
-  )
+  return <main className="contactPage"><ContactSection /></main>;
 }
 
-export default Contact
+export default Contact;
