@@ -65,7 +65,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(1);
+  filter: grayscale(0.35);
   transition:
     transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1),
     filter 400ms ease;
@@ -118,7 +118,7 @@
 }
 .projectCard:hover .projectImage {
   transform: scale(1.06);
-  filter: grayscale(0.2);
+  filter: grayscale(0);
 }
 .projectCard:hover .projectView {
   opacity: 1;
@@ -216,6 +216,32 @@
   to {
     transform: translateX(-50%);
   }
+}
+@media (max-width: 1024px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 780px;
+  }
+}
+.projectCard {
+  cursor: pointer;
+}
+.projectTitleLink {
+  color: inherit;
+  text-decoration: none;
+}
+.projectTitleLink:hover {
+  color: #fff;
+}
+.projectTitleLink:focus-visible,
+.projectView:focus-visible,
+.allProjectsLink:focus-visible {
+  outline: 2px solid #f5f3ef;
+  outline-offset: 3px;
+}
+.projectCard:focus-within .projectView {
+  opacity: 1;
+  transform: none;
 }
 @media (max-width: 720px) {
   .projectsIntro,

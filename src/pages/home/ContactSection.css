@@ -1,5 +1,5 @@
 .contactSection { width: 100%; padding: clamp(5rem,10vw,9rem) clamp(1.25rem,7vw,8rem); color: #f5f3ef; background: #000; }
-.contactLayout { display: grid; grid-template-columns: minmax(0,.9fr) minmax(340px,1fr); gap: clamp(3rem,9vw,10rem); max-width: 1240px; margin: 0 auto; align-items: start; }
+.contactLayout { display: grid; grid-template-columns: minmax(0,.9fr) minmax(min(340px,100%),1fr); gap: clamp(3rem,9vw,10rem); max-width: 1240px; margin: 0 auto; align-items: start; }
 .contactEyebrow, .formField label, .contactMeta p { color: rgba(255,255,255,.52); font-family: "Oswald", sans-serif; font-size: .72rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
 .contactIntro h2 { margin: .65rem 0 1.35rem; font-family: "Oswald", sans-serif; font-size: clamp(3.2rem,6vw,6rem); font-weight: 500; line-height: .86; letter-spacing: -.05em; }
 .contactCopy { max-width: 410px; color: #a8a8a8; font-size: 1rem; line-height: 1.7; }

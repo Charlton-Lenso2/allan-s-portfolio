@@ -1,8 +1,8 @@
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(1rem, 4vw, 3rem);
+  align-items: stretch;
+  gap: clamp(0.75rem, 1.6vw, 1.5rem);
   min-height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
@@ -10,75 +10,79 @@
   padding: 110px 20px 40px;
 
   opacity: 0;
-  transition: 0.5s;
-  transform: translateY(40px);
-  animation: fadeUp 0.7s ease forwards;
+  animation: heroFade 0.6s ease forwards;
 }
 
 .heroImage {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
 }
 
-.heroImage img {
-  display: block;
-  object-fit: cover;
-  width: min(100%, 400px);
-  height: auto;
+/* Photos are stacked in one grid cell; the active one fades in above. */
+.heroFrame {
+  display: grid;
+  animation: heroZoom 1s cubic-bezier(0.22, 1, 0.36, 1) 0.05s backwards;
+}
+
+.heroPhoto {
+  grid-area: 1 / 1;
+  width: clamp(220px, 24vw, 340px);
   aspect-ratio: 4 / 5;
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transform: scale(1.03);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.heroPhoto.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
 }
 
 .firstText,
 .secondText {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
   gap: 0.25rem;
+  align-self: stretch;
 }
 
 .firstText {
+  justify-content: end;
   text-align: left;
-  align-items: flex-start;
+  animation: heroFromLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s backwards;
 }
 
 .secondText {
-  text-align: right;
-  align-items: flex-end;
+  justify-content: start;
+  text-align: left;
+  animation: heroFromRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.35s backwards;
 }
 
-.hi {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  border-radius: 50%;
-  color: #000;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  font-weight: 700;
-  height: 45px;
-  width: 45px;
-  font-size: 1.1rem;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
-  animation: float 3s ease-in-out infinite;
-  z-index: 2;
+.allan {
+  grid-row: 1;
+  align-self: end;
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
+.product {
+  grid-row: 2;
+}
 
-  50% {
-    transform: translateY(-10px);
-  }
+.designer {
+  grid-row: 2;
+}
+
+.desc {
+  grid-row: 3;
+  align-self: start;
 }
 
 .desc {
@@ -92,7 +96,6 @@
   color: #dbdbdbab;
   font-size: clamp(1rem, 2.3vw, 1.3rem);
   letter-spacing: 0.3em;
-  margin-bottom: 0.35rem;
   font-family: "Oswald", sans-serif;
 }
 
@@ -114,8 +117,22 @@
 
   .firstText,
   .secondText {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
+  }
+
+  /* Desktop grid alignment (align-self: end/start) must not leak into the
+     mobile flex column, where it becomes right/left edge alignment. */
+  .allan,
+  .desc {
+    align-self: center;
+  }
+
+  .heroPhoto {
+    width: clamp(190px, 56vw, 260px);
   }
 
   .heroImage {
@@ -132,28 +149,69 @@
     padding-top: 120px;
   }
 
-  .heroImage img {
-    width: min(100%, 320px);
-  }
-
   .product,
   .designer {
     font-size: clamp(2.4rem, 14vw, 3.6rem);
   }
 
-  .hi {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-    bottom: 15px;
-    right: 15px;
+  .desc {
+    max-width: min(320px, 88vw);
   }
 }
 
-@keyframes fadeUp {
+@keyframes heroFade {
   to {
     opacity: 1;
-    transform: translateY(0);
+  }
+}
+
+@keyframes heroFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-64px);
+  }
+
+  to {
+    opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes heroFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(64px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .firstText,
+  .secondText,
+  .heroFrame {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .heroPhoto {
+    transition: none;
   }
 }

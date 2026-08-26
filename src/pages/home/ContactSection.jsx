@@ -1,21 +1,25 @@
 import "./ContactSection.css";
+import useReveal from "../../hooks/useReveal";
 
 function ContactSection() {
+  const introRef = useReveal();
+  const formRef = useReveal();
+
   return (
     <section className="contactSection" aria-labelledby="contact-title">
       <div className="contactLayout">
-        <header className="contactIntro">
+        <header className="contactIntro reveal" ref={introRef}>
           <p className="contactEyebrow">Contact</p>
           <h2 id="contact-title">Let&apos;s make<br />something work.</h2>
           <p className="contactCopy">I am open to product design projects, brand collaborations, and thoughtful conversations about ideas that need a clear visual direction.</p>
           <div className="contactMeta">
             <p>Best for</p>
             <span>Digital products, brand identities, and visual systems.</span>
-            <a href="mailto:hello@allanskonce.com">hello@allanskonce.com</a>
+            <a href="mailto:lensocharlton63@gmail.com">lensocharlton63@gmail.com</a>
           </div>
         </header>
 
-        <form className="contactForm" action="#" method="POST">
+        <form className="contactForm reveal" ref={formRef} action="#" method="POST">
           <div className="formField">
             <label htmlFor="name">Name</label>
             <input id="name" name="name" type="text" placeholder="Your name" autoComplete="name" required />

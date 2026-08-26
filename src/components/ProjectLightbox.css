@@ -1,0 +1,101 @@
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  padding: clamp(0.75rem, 3vw, 2rem);
+  animation: lightboxFadeIn 0.25s ease both;
+}
+
+.lightboxPanel {
+  width: min(1080px, 100%);
+  margin: auto;
+  background: #101010;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 22px;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.lightboxHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+}
+
+.lightboxMeta {
+  color: rgba(255, 255, 255, 0.52);
+  font-family: "Oswald", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.lightboxHeader h2 {
+  margin-top: 0.35rem;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.lightboxClose {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  color: #111;
+  background: #f5f3ef;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.lightboxClose:hover {
+  color: #fff;
+  background: #303030;
+  transform: rotate(90deg);
+}
+
+.lightboxClose:focus-visible {
+  outline: 2px solid #f5f3ef;
+  outline-offset: 3px;
+}
+
+.lightboxGallery {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.lightboxGallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #161616;
+  border-radius: 14px;
+}
+
+@keyframes lightboxFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightboxOverlay {
+    animation: none;
+  }
+
+  .lightboxClose {
+    transition: none;
+  }
+}

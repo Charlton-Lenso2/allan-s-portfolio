@@ -1,3 +1,4 @@
+import Mascot from "../components/Mascot"
 import AboutSection from "../pages/home/AboutSection"
 import ContactSection from "../pages/home/ContactSection"
 import Hero from "../pages/home/Hero"
@@ -7,6 +8,7 @@ import "./Home.css"
 function Home() {
   return (
     <div className="home">
+      <Mascot/>
       <Hero/>
       <AboutSection/>
       <ProjectsSection/>

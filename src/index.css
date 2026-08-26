@@ -36,6 +36,10 @@ h6,
   font-family: "Oswald", sans-serif;
 }
 
+.footer h3 {
+  font-family: "Oswald", sans-serif;
+}
+
 em,
 i,
 .italic,
@@ -104,30 +108,6 @@ i,
   margin-top: 10px;
 }
 
-.icon-github {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  background-color: #000;
-
-  transition: all 0.3s ease;
-}
-
-.icon-github:hover {
-  transform: translateY(-6px) scale(1.1);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.icon-github:active {
-  transform: scale(0.95);
-}
-
 .icon-linkedin {
   width: 45px;
   height: 45px;
@@ -184,9 +164,75 @@ i,
 
 @media (max-width: 768px) {
   .footer {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 18px;
     padding: 30px 20px;
+  }
+
+  .footer .iconsection {
+    justify-content: center;
+  }
+}
+
+/* ---------- Scroll-reveal animations (used with the useReveal hook) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered children for grids of cards */
+.projectGrid.reveal .projectCard,
+.projectsArchive.reveal .archiveCard,
+.capabilityList.reveal > div {
+  opacity: 0;
+  transform: translateY(34px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projectGrid.reveal.is-visible .projectCard,
+.projectsArchive.reveal.is-visible .archiveCard,
+.capabilityList.reveal.is-visible > div {
+  opacity: 1;
+  transform: none;
+}
+
+.projectGrid.reveal.is-visible .projectCard:nth-child(2),
+.projectsArchive.reveal.is-visible .archiveCard:nth-child(2),
+.capabilityList.reveal.is-visible > div:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.projectGrid.reveal.is-visible .projectCard:nth-child(3),
+.projectsArchive.reveal.is-visible .archiveCard:nth-child(3),
+.capabilityList.reveal.is-visible > div:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.projectGrid.reveal.is-visible .projectCard:nth-child(4),
+.projectsArchive.reveal.is-visible .archiveCard:nth-child(4) {
+  transition-delay: 0.45s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .projectGrid.reveal .projectCard,
+  .projectsArchive.reveal .archiveCard,
+  .capabilityList.reveal > div {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

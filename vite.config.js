@@ -4,4 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // Relative asset paths so the built site works from any folder,
+  // including opening dist/index.html straight from disk.
+  base: './',
 })

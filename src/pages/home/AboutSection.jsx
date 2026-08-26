@@ -1,51 +1,47 @@
 import "./AboutSection.css";
-import aboutimage from "../../assets/hero.jpeg";
+import aboutimage from "../../assets/WhatsApp Image 2026-08-26 at 21.23.34.jpeg";
 import { Link } from "react-router-dom";
+import useReveal from "../../hooks/useReveal";
 
 function AboutSection() {
+  const textRef = useReveal();
+  const imageRef = useReveal();
+
   return (
     <>
       <div className="aboutsection">
-        <div className="abouttext">
+        <div className="abouttext reveal" ref={textRef}>
           <h1>ABOUT ME</h1> <br /> <br />
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-            nihil doloremque repellendus. Eum fugit maxime, natus repudiandae
-            earum consectetur fuga asperiores sunt id pariatur quidem nam. Minus
-            et quia vitae. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Quibusdam eius voluptatibus sequi assumenda facilis sit magnam
-            eos nihil ut dolor placeat temporibus quam libero neque corrupti,
-            veniam corporis incidunt molestias? Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Quia maxime vero ut quos velit
-            doloremque, ab corrupti beatae veritatis nesciunt pariatur placeat
-            hic laborum, architecto nostrum dolorum eligendi sunt asperiores.
+            Hi, I&apos;m Allan K. Skonce, a Graphic Designer focused on creating
+            visual identities and designs that help brands communicate clearly
+            and stand out.
           </p>
           <br />
           <br />
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-            nihil doloremque repellendus. Eum fugit maxime, natus repudiandae
-            earum consectetur fuga asperiores sunt id pariatur quidem nam. Minus
-            et quia vitae. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Quibusdam eius voluptatibus sequi assumenda facilis sit magnam
-            eos nihil ut dolor placeat temporibus quam libero neque corrupti,
-            veniam corporis incidunt molestias? Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Quia maxime vero ut quos velit
-            doloremque, ab corrupti beatae veritatis nesciunt pariatur placeat
-            hic laborum, architecto nostrum dolorum eligendi sunt asperiores.
+            I enjoy turning ideas into purposeful visuals, from brand identities
+            and marketing materials to social media content and print design. My
+            approach combines creativity with strategy, ensuring that every
+            design has a clear purpose rather than simply looking good.
           </p>
           <br />
           <br />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            dicta, voluptate aliquam dolore doloremque eius sed. Tempora,
-            debitis, unde ratione laboriosam dignissimos rem corporis esse
+            I&apos;m constantly developing my craft, exploring new ways to solve
+            visual problems and expanding my understanding of digital and
+            product experiences. I believe good design should be simple,
+            intentional, memorable, and meaningful.
           </p> <br /> <br />
+          <p className="aboutFocus">
+            Currently focused on: Branding • Graphic Design • Print Design •
+            Social Media Design • UI/UX
+          </p>
           <Link to="/about">
             <button className="abtbtn">About</button>
           </Link>
         </div>
-        <div className="aboutimage">
+        <div className="aboutimage reveal" ref={imageRef}>
           <img src={aboutimage} alt="allan's photo" />
         </div>
       </div>

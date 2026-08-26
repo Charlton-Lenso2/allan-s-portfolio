@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import portrait from "../assets/hero.jpeg";
+import portrait from "../assets/WhatsApp Image 2026-08-26 at 21.21.04 (1).jpeg";
 import AutoCarousel from "./AutoCarousel";
+import useReveal from "../hooks/useReveal";
 import "./About.css";
 
 const certImages = Object.values(
@@ -11,10 +12,17 @@ const certImages = Object.values(
 );
 
 function About() {
+  const introRef = useReveal();
+  const portraitRef = useReveal();
+  const storyRef = useReveal();
+  const capabilitiesRef = useReveal();
+  const certificatesRef = useReveal();
+  const closingRef = useReveal();
+
   return (
     <main className="aboutPage">
       <section className="aboutHero">
-        <div className="aboutPageIntro">
+        <div className="aboutPageIntro reveal" ref={introRef}>
           <p className="pageEyebrow">About Allan</p>
           <h1>
             Design with
@@ -26,10 +34,15 @@ function About() {
             connect with people.
           </p>
         </div>
-        <img className="aboutPortrait" src={portrait} alt="Allan Skonce" />
+        <img
+          className="aboutPortrait reveal"
+          ref={portraitRef}
+          src={portrait}
+          alt="Allan Skonce"
+        />
       </section>
 
-      <section className="aboutStory">
+      <section className="aboutStory reveal" ref={storyRef}>
         <p className="pageEyebrow">The approach</p>
         <div>
           <h2>
@@ -50,7 +63,7 @@ function About() {
 
       <section className="aboutCapabilities">
         <p className="pageEyebrow">What I do</p>
-        <div className="capabilityList">
+        <div className="capabilityList reveal" ref={capabilitiesRef}>
           <div>
             <span>01</span>
             <h3>Brand identity</h3>
@@ -74,7 +87,7 @@ function About() {
         </div>
       </section>
 
-      <section className="aboutCertificates">
+      <section className="aboutCertificates reveal" ref={certificatesRef}>
         <p className="pageEyebrow">Certifications</p>
         <AutoCarousel
           images={certImages}
@@ -83,7 +96,7 @@ function About() {
         />
       </section>
 
-      <section className="aboutClosing">
+      <section className="aboutClosing reveal" ref={closingRef}>
         <p>Have a project in mind?</p>
         <Link to="/contact">
           Start a conversation <span aria-hidden="true">↗</span>

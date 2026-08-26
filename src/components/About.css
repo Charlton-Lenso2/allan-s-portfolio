@@ -48,7 +48,7 @@
   max-height: 580px;
   object-fit: cover;
   object-position: center;
-  filter: grayscale(1);
+  filter: grayscale(0.5);
 }
 .aboutStory {
   display: grid;
@@ -167,7 +167,7 @@
   background: #1a1a1a;
   padding: 1rem;
   border-radius: 12px;
-  filter: grayscale(0.2);
+  filter: grayscale(0.1);
   transition:
     filter 0.3s ease,
     transform 0.3s ease;

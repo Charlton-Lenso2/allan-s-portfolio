@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./ProjectsSection.css";
 import AutoCarousel from "../../components/AutoCarousel";
+import useReveal from "../../hooks/useReveal";
 
 const nyotaImages = Object.values(
   import.meta.glob(
@@ -52,6 +54,26 @@ const projects = [
 ];
 
 function ProjectsSection() {
+  const navigate = useNavigate();
+  const pressPoint = useRef(null);
+  const introRef = useReveal();
+  const gridRef = useReveal();
+  const footerRef = useReveal();
+  const toolkitRef = useReveal();
+
+  const handlePressStart = (event) => {
+    pressPoint.current = { x: event.clientX, y: event.clientY };
+  };
+
+  const handleCardTap = (event) => {
+    const press = pressPoint.current;
+    pressPoint.current = null;
+    if (!press || event.clientX == null) return;
+    const moved = Math.hypot(event.clientX - press.x, event.clientY - press.y);
+    if (moved > 12) return;
+    navigate("/projects");
+  };
+
   const skills = [
     "Product Design",
     "Canva",
@@ -67,7 +89,7 @@ function ProjectsSection() {
 
   return (
     <section className="projsec" aria-labelledby="projects-title">
-      <div className="projectsIntro">
+      <div className="projectsIntro reveal" ref={introRef}>
         <div>
           <p className="sectionEyebrow">Selected work</p>
           <h2 id="projects-title">
@@ -82,9 +104,14 @@ function ProjectsSection() {
         </p>
       </div>
 
-      <div className="projectGrid">
+      <div className="projectGrid reveal" ref={gridRef}>
         {projects.map((project) => (
-          <article className="projectCard" key={project.number}>
+          <article
+            className="projectCard"
+            key={project.number}
+            onPointerDown={handlePressStart}
+            onClick={handleCardTap}
+          >
             <div className="projectImageWrap">
               <AutoCarousel
                 images={project.images}
@@ -98,21 +125,25 @@ function ProjectsSection() {
             </div>
             <div className="projectDetails">
               <p>{project.type}</p>
-              <h3>{project.title}</h3>
+              <h3>
+                <Link className="projectTitleLink" to="/projects">
+                  {project.title}
+                </Link>
+              </h3>
               <p className="projectDescription">{project.description}</p>
             </div>
           </article>
         ))}
       </div>
 
-      <div className="projectsFooter">
+      <div className="projectsFooter reveal" ref={footerRef}>
         <p>More curious things in the works.</p>
         <Link className="allProjectsLink" to="/projects">
           View all projects <span aria-hidden="true">&rarr;</span>
         </Link>
       </div>
 
-      <div className="toolkitSection">
+      <div className="toolkitSection reveal" ref={toolkitRef}>
         <p className="toolkitLabel">Toolkit</p>
         <div className="toolkitMarqueeWrapper">
           <div className="toolkitTrack">
