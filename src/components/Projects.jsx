@@ -33,9 +33,9 @@ const personalImages = Object.values(
 const work = [
   {
     number: "01",
-    title: "Nyota Travel Agency",
+    title: "Branding",
     category: "Digital Experience",
-    year: "2024",
+    year: "2026",
     images: nyotaImages,
     description:
       "A comprehensive digital experience and booking platform for a forward-thinking travel agency.",
@@ -44,7 +44,7 @@ const work = [
     number: "02",
     title: "Digital Marketing Designs",
     category: "Brand identity",
-    year: "2023",
+    year: "2026",
     images: dmImages,
     description:
       "A fresh and modern visual identity system that elevates the brand presence and communicates clearly.",
@@ -53,16 +53,16 @@ const work = [
     number: "03",
     title: "Kulan Auto App",
     category: "Product Design",
-    year: "2023",
+    year: "2026",
     images: productDesignImages,
     description:
       "A mobile application mockup focused on seamless user flow, modern aesthetics, and conversion optimization.",
   },
   {
     number: "04",
-    title: "Golden Visuals",
+    title: "Personal Projects",
     category: "Personal Project",
-    year: "2022",
+    year: "2026",
     images: personalImages,
     description:
       "A personal exploration into visual design, typography, and creative compositions.",

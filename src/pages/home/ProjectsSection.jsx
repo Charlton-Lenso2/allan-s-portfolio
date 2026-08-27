@@ -29,7 +29,7 @@ const productDesignImages = Object.values(
 const projects = [
   {
     number: "01",
-    title: "Nyota Travel Agency",
+    title: "Branding",
     type: "Digital Experience",
     description:
       "A comprehensive digital experience and booking platform for a forward-thinking travel agency.",
@@ -37,7 +37,7 @@ const projects = [
   },
   {
     number: "02",
-    title: "DM Designs",
+    title: "Digital Marketing Designs",
     type: "Brand identity",
     description:
       "A fresh and modern visual identity system that elevates the brand presence and communicates clearly.",
