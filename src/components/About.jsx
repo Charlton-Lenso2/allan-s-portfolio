@@ -29,7 +29,7 @@ function About() {
             <br />a point of view.
           </h1>
           <p className="aboutPageLead">
-            Allan Skonce is a multidisciplinary designer creating considered
+            I'm a multidisciplinary designer creating considered
             identities, digital experiences, and visual systems that help ideas
             connect with people.
           </p>

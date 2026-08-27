@@ -15,7 +15,7 @@ function ContactSection() {
           <div className="contactMeta">
             <p>Best for</p>
             <span>Digital products, brand identities, and visual systems.</span>
-            <a href="mailto:lensocharlton63@gmail.com">lensocharlton63@gmail.com</a>
+            <a href="mailto:allanskonce@gmail.com">allanskonce@gmail.com</a>
           </div>
         </header>
 

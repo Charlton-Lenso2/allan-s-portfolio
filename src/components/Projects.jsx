@@ -42,7 +42,7 @@ const work = [
   },
   {
     number: "02",
-    title: "DM Designs",
+    title: "Digital Marketing Designs",
     category: "Brand identity",
     year: "2023",
     images: dmImages,
