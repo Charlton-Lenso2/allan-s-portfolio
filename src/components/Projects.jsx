@@ -38,16 +38,16 @@ const work = [
     year: "2026",
     images: nyotaImages,
     description:
-      "A comprehensive digital experience and booking platform for a forward-thinking travel agency.",
+      "A brand guideline for a luxury travel agency, focusing on creating a cohesive and visually appealing brand identity that reflects the company's values and mission.",
   },
   {
     number: "02",
-    title: "Digital Marketing Designs",
+    title: "Marketing Designs",
     category: "Brand identity",
     year: "2026",
     images: dmImages,
     description:
-      "A fresh and modern visual identity system that elevates the brand presence and communicates clearly.",
+      "A marketing design project for a solar power bank company, focusing on creating a fresh and modern visual identity system that elevates the brand presence and communicates clearly.",
   },
   {
     number: "03",
@@ -56,7 +56,7 @@ const work = [
     year: "2026",
     images: productDesignImages,
     description:
-      "A mobile application mockup focused on seamless user flow, modern aesthetics, and conversion optimization.",
+      "A mobile application designed to connect car owners with trusted mechanics, providing a seamless and efficient experience.",
   },
   {
     number: "04",
@@ -65,7 +65,7 @@ const work = [
     year: "2026",
     images: personalImages,
     description:
-      "A personal exploration into visual design, typography, and creative compositions.",
+      "A collection of personal design projects, showcasing creativity and experimentation in various design disciplines.",
   },
 ];
 

@@ -42,7 +42,7 @@ function NavBar() {
             className={isScrolling ? "brand avatarMode" : "brand"}
             aria-label="Allan Skonce — home"
           >
-            <span className="brandName">Allan Skonce</span>
+            <span className="brandName">Allan Kundai Skonce</span>
             <img
               className="brandAvatar"
               src={avatarImg}

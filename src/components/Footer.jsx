@@ -13,8 +13,9 @@ function Footer() {
           <br />
           <br />
           <p>
+            +263 71 369 8249 <br />
+            +263 78 065 9304 <br />
             Open to new projects and collaborations. <br />
-            Let&apos;s create work with purpose.
           </p>
         </div>
         <div className="second">

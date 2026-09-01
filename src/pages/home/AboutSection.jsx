@@ -13,7 +13,7 @@ function AboutSection() {
         <div className="abouttext reveal" ref={textRef}>
           <h1>ABOUT ME</h1> <br /> <br />
           <p>
-            Hi, I&apos;m Allan K. Skonce, a Graphic Designer focused on creating
+            Hi, I&apos;m Allan K. Skonce, a Graphic and Product Designer focused on creating
             visual identities and designs that help brands communicate clearly
             and stand out.
           </p>

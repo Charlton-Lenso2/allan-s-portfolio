@@ -32,15 +32,15 @@ const projects = [
     title: "Branding",
     type: "Digital Experience",
     description:
-      "A comprehensive digital experience and booking platform for a forward-thinking travel agency.",
+      "A brand guideline for a luxury travel agency, focusing on creating a cohesive and visually appealing brand identity that reflects the company's values and mission.",
     images: nyotaImages,
   },
   {
     number: "02",
-    title: "Digital Marketing Designs",
+    title: "Marketing Designs",
     type: "Brand identity",
     description:
-      "A fresh and modern visual identity system that elevates the brand presence and communicates clearly.",
+      "A marketing design project for a solar power bank company, focusing on creating a fresh and modern visual identity system that elevates the brand presence and communicates clearly.",
     images: dmImages,
   },
   {
@@ -48,7 +48,7 @@ const projects = [
     title: "Kulan Auto App",
     type: "Product Design",
     description:
-      "A mobile application mockup focused on seamless user flow, modern aesthetics, and conversion optimization.",
+      "A mobile application designed to connect car owners with trusted mechanics, providing a seamless and efficient experience.",
     images: productDesignImages,
   },
 ];

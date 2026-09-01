@@ -27,7 +27,7 @@ function Hero() {
     <div className="hero">
       <div className="firstText">
         <h3 className="allan">ALLAN SKONCE</h3>
-        <h1 className="product">PRODUCT</h1>
+        <h1 className="product">GRAPHIC</h1>
       </div>
       <div className="heroImage">
         <div className="heroFrame">
